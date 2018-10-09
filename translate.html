@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translate</title>
+</head>
+<style>
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    #cancelbtn {
+        padding: 14px 20px;
+        background-color: #f44336;
+    }
+
+    #cancelbtn, #signupbtn {
+        float: left;
+        width: 50%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    @media screen and (max-width: 300px) {
+        #cancelbtn, #signupbtn {
+            width: 100%;
+        }
+    }
+</style>
+
+<script type="text/javascript" src="http://moracodex.000webhostapp.com/translateJS.js/"></script>
+<body>
+<label>Select Language</label>
+<select id="lang-selector" onchange="convert()">
+    <option value=language.ENGLISH>English</option>
+    <option value=language.SINHALA>Sinhala</option>
+    <option value=language.TAMIL>Tamil</option>
+    <option value=language.JAPANESE>Japanese</option>
+</select>
+<hr>
+<button class="translate" eng-term="Touch this">Touch this</button>
+
+<h2 class="translate" eng-term="Signup form">Signup Form</h2>
+
+<form action="/action_page.php" style="border:1px solid #ccc">
+    <div class="container">
+        <label class="translate" eng-term="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label class="translate" eng-term="Password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label class="translate" eng-term="Repeat Password"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <input type="checkbox" checked="checked"> Remember me
+        <p class="translate" eng-term="By creating an account you agree to our">By creating an account you agree to our
+            <a class="translate" eng-term="Terms & Privacy" href="#">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+            <button type="button" id="cancelbtn" class="translate" eng-term="cancel">Cancel</button>
+            <button type="submit" id="signupbtn" class="translate" eng-term="sign up">Sign Up</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
